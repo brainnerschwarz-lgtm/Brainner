@@ -1,7 +1,7 @@
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
-background:#f4f6f9;
+background:#eef2f7;
 }
 
 header{
@@ -9,53 +9,64 @@ background:#2d6cdf;
 color:white;
 padding:20px;
 display:flex;
+align-items:center;
 justify-content:space-between;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin-left:15px;
 text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
 text-align:center;
-padding:50px;
+padding:60px 20px;
+background:white;
 }
 
 .hero input{
-padding:10px;
-width:250px;
+padding:12px;
+width:260px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
 .hero button{
-padding:10px 20px;
+padding:12px 20px;
 background:#2d6cdf;
 color:white;
 border:none;
+border-radius:6px;
+cursor:pointer;
 }
 
 .documents{
-padding:30px;
+padding:40px;
 }
 
 .card{
 background:white;
 padding:20px;
 margin:15px;
+width:220px;
 display:inline-block;
-width:200px;
 border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
 }
 
 .card a{
 display:block;
 margin-top:10px;
-background:#ff3c3c;
+background:#ff4d4d;
 color:white;
-padding:8px;
+padding:10px;
 text-align:center;
+border-radius:6px;
 text-decoration:none;
-border-radius:5px;
 }
