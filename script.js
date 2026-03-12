@@ -2,25 +2,25 @@ const documents = [
 {
 title: "Impact de l'IA",
 type: "Article",
-file: "pdf/ia.pdf"
+file: "#"
 },
 {
 title: "Changement climatique",
 type: "Rapport",
-file: "pdf/climat.pdf"
+file: "#"
 },
 {
 title: "Gestion de l'eau",
 type: "Thèse",
-file: "pdf/eau.pdf"
+file: "#"
 }
-]
+];
 
 function afficherDocuments(liste){
 
-let container = document.querySelector(".documents")
+let container = document.getElementById("documentsContainer");
 
-container.innerHTML = "<h2>Derniers Documents</h2>"
+container.innerHTML = "<h2>Derniers Documents</h2>";
 
 liste.forEach(doc => {
 
@@ -28,35 +28,27 @@ container.innerHTML += `
 <div class="card">
 <h3>${doc.title}</h3>
 <p>${doc.type}</p>
-<button onclick="ouvrirPDF('${doc.file}')">
-Télécharger PDF
-</button>
+<a href="${doc.file}" target="_blank">Télécharger PDF</a>
 </div>
-`
+`;
 
-})
-
-}
-
-function ouvrirPDF(fichier){
-
-window.open(fichier, "_blank")
+});
 
 }
 
 function rechercher(){
 
-let input = document
+let texte = document
 .getElementById("searchInput")
 .value
-.toLowerCase()
+.toLowerCase();
 
 let resultat = documents.filter(doc =>
-doc.title.toLowerCase().includes(input)
-)
+doc.title.toLowerCase().includes(texte)
+);
 
-afficherDocuments(resultat)
+afficherDocuments(resultat);
 
 }
 
-afficherDocuments(documents)
+afficherDocuments(documents);
